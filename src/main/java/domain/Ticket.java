@@ -2,24 +2,26 @@ package domain;
 
 import java.util.Objects;
 
-public class Ticket implements Comparable<Ticket>{
-   protected int id;
-   protected int price;
-   protected String airportFrom;
-   protected String airportTo;
-   protected int travelTime;
+public class Ticket implements Comparable<Ticket> {
+    protected int id;
+    protected int price;
+    protected String airportFrom;
+    protected String airportTo;
+    protected int travelTime;
 
-   public Ticket() {
+    public Ticket() {
 
-   };
+    }
 
-   public Ticket(int id, int price, int travelTime, String airportFrom, String airportTo) {
-       this.id = id;
-       this.price = price;
-       this.travelTime = travelTime;
-       this.airportFrom = airportFrom;
-       this.airportTo = airportTo;
-   }
+    ;
+
+    public Ticket(int id, int price, int travelTime, String airportFrom, String airportTo) {
+        this.id = id;
+        this.price = price;
+        this.travelTime = travelTime;
+        this.airportFrom = airportFrom;
+        this.airportTo = airportTo;
+    }
 
     public int getId() {
         return id;
@@ -72,7 +74,6 @@ public class Ticket implements Comparable<Ticket>{
         if (o == null || getClass() != o.getClass()) return false;
         Ticket ticket = (Ticket) o;
         return Objects.equals(price, ticket.price);
-
     }
 
     @Override
